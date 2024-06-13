@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  demyst:
+    image: saivyas99/demyst:latest
+    ports:
+      - "9090:9090"
+    depends_on:
+      - xero_mock
+
+  xero_mock:
+    image: jaypeng2015/show-me-the-money:latest
+    ports:
+      - "3000:3000"
+
